@@ -4,10 +4,10 @@ package com.theironyard;
  * This is a utility class that will calculate and return the volume of 3D
  * shapes using the Math class. Your job is to create and implement static
  * methods as described below.
- *
+ * <p>
  * Remember that the Math class provides helpful static properties and methods.
  * You can read the documentation here:
- *
+ * <p>
  * https://docs.oracle.com/javase/8/docs/api/java/lang/Math.html
  */
 public class Volume {
@@ -16,26 +16,28 @@ public class Volume {
      * Create a method named cube(). This method should be static and publicly
      * accessible. It accepts one double argument, the length of the side of a
      * cube, and returns the volume of that cube as a double.
-     *
+     * <p>
      * The formula for the area of a cube is V = a^3.
-     *
+     * <p>
      * If the length of a side of a cube is 5.2, then the volume returned would
      * be 140.608.
-     *
+     * <p>
      * You can experiment with it on Google:
-     *
+     * <p>
      * https://www.google.com/#q=calculate+volume+of+cube
-     *
+     * <p>
      * For example,
-     *
+     * <p>
      * Note: This method may NOT use the multiplication operator, `*`.
      *
      * @param edge The length of an edge of the cube
      * @return The volume of a cube.
      */
     // todo: create the cube() method as described above
+    public static double cube(double edge) {
+        return Math.pow(edge, 3);
 
-
+    }
     /**
      * Create a method named cone(). This method should be static and publicly
      * accessible. It accepts two double arguments, radius and height. It
@@ -57,7 +59,9 @@ public class Volume {
      * @return The volume of the cone
      */
     // todo: create the cone() method as described above
-
+public static double cone(double radius, double height){
+return Math.PI *(Math.pow(radius, 2) * (height / 3));
+}
 
     /**
      * Create a method named sphere(). This method should be static and publicly
@@ -79,6 +83,8 @@ public class Volume {
      * @return
      */
     // todo: create a method to calculate the area of a sphere
-
+public static double sphere(double radius){
+    return 4.0 / 3.0 * Math.PI * Math.pow(radius, 3);
+}
 
 }
